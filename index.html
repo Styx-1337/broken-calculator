@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+<style>
+html, body{
+	background: #100a1c;
+	background-image: radial-gradient(50% 30% ellipse at center top, #2a2764 0%, rgba(0,0,0,0) 100%), radial-gradient(60% 50% ellipse at center bottom, #421a42 0%, #180936 100%);
+	background-attachment: fixed;
+	/*color: #6cacc5;*/
+}
+@font-face {
+	font-family: aquire;
+	src: url(fonts/Aquire.otf);
+}
+@font-face {
+	font-family: nanami;
+	src: url(fonts/Nanami-Regular.otf);
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: nanami;
+	src: url(fonts/Nanami-Light.otf);
+	font-weight: 400;
+}
+
+nav{
+	background-color: #222831;
+	/*background-color: #e74c3c;*/
+}
+
+.nav-link{
+	font-family: montserrat;
+	font-weight: 500;
+}
+body{
+	/*color:#212529;*/
+	color:#51544a;
+	background-color: #E3E3E3;
+	font-family: nanami;
+}
+
+footer{
+	background-color: #222831;
+	/*background-color: #141414;*/
+	padding: 20px;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+
+@keyframes moveright {
+	0% {left:0px;}
+	50% {left:5px;}
+	100% {left:0px;}
+}
+@keyframes backgroundColorPalette {
+	0% {
+		color: #ee6055;
+	}
+	25% {
+		color: #60d394;
+	}
+	50% {
+		color: #aaf683;
+	}
+	75% {
+		color: #ffd97d;
+	}
+	100% {
+		color: #ff9b85;
+	}
+}
+
+.flash{
+	font-size: 20px;
+	font-weight: bold;
+	animation-name: backgroundColorPalette;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear; 
+}
+.bounceRight{
+	position: relative;
+	animation-name: moveright;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+@keyframes moveleft {
+	0% {right:0px;}
+	50% {right:5px;}
+	100% {right:0px;}
+}
+.bounceLeft{
+	position: relative;
+	animation-name: moveleft;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+.btn-custom{
+	color: #6e00ff;
+	background-color: #30087e;
+	border-color: #2d00cf;
+	text-shadow: 1px 1px black;
+	border-radius:0px;
+	width:45px;
+	height:45px;
+}
+
+.text-custom{
+	color: #6e00ff;
+	text-shadow: 1px 1px black;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+</style>
+<body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-0">
+		<div class="container">
+			<a class="navbar-brand" href="#" style="font-family: aquire; font-size:25px;">Styx</a>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active" style="position: relative;">
+					<a class="nav-link flash" href="https://discord.com/invite/NuDwUvE"><i class="fas fa-arrow-right bounceRight"></i> Join ATWD! <i class="fas fa-arrow-left bounceLeft"></i></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<div class="container text-center" style="margin-top: 10%;margin-bottom: 50px;">
+		<div class="row" style="width: 38%;align-items: center;margin: 0 auto;justify-content: center;text-align: center;">
+			<div class="col-md-3" style="padding-left: 51px;"><button class="btn btn-custom clearbtn">C</button></div>
+			<div class="col-md-1"><button class="btn btn-custom removebtn"><</button></div>
+			<div class="col-md-6 result">0</div>
+			<div class="opPreview" style="position: absolute;margin-bottom: 45px;margin-left: 13%;font-size: 26px;"></div>
+		</div>
+		<div class="row mt-3" style="width: 25%;align-items: center;margin: 0 auto;justify-content: center;text-align: center;">
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="7">7</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="8">8</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="9">9</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="+">+</button></div>
+		</div>
+		<div class="row mt-3" style="width: 25%;align-items: center;margin: 0 auto;justify-content: center;text-align: center;">
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="4">4</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="5">5</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="6">6</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="-">-</button></div>
+		</div>
+		<div class="row mt-3" style="width: 25%;align-items: center;margin: 0 auto;justify-content: center;text-align: center;">
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="1">1</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="2">2</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="3">3</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="*">*</button></div>
+		</div>
+		<div class="row mt-3" style="width: 25%;align-items: center;margin: 0 auto;justify-content: center;text-align: center;">
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="0">0</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val=".">.</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="=">=</button></div>
+			<div class="col-md-3"><button class="btn btn-custom calcbtn" val="/">/</button></div>
+		</div>
+	</div>
+	<div class="d-none valueholder"></div>
+	<footer>
+		<h4>Thanks for visiting</h4>
+		<p>Thanks to "All things web development" for the challenge</p>
+	</footer>
+	<script>
+		var elements = document.getElementsByClassName("calcbtn");
+		var valueholder = 0;
+		for (var i = 0; i < elements.length; i++) {
+			elements[i].addEventListener("click",function(){
+				currentvalue = document.querySelector(".result").innerHTML;
+				if (currentvalue == "0" || currentvalue == "") {
+					currentvalue = document.querySelector(".result").innerHTML = "";
+				}
+				newvalue = this.getAttribute("val");
+
+				if (newvalue == "*" || newvalue == "/" || newvalue == "+" || newvalue == "-"){
+					document.querySelector(".opPreview").innerHTML = newvalue;
+					valueholder = parseFloat(currentvalue);
+					document.querySelector(".result").innerHTML = "";
+				}
+				else if(newvalue == "="){
+					operator = document.querySelector(".opPreview").innerHTML;
+					document.querySelector(".result").innerHTML = eval(valueholder + operator + document.querySelector(".result").innerHTML);
+				}
+				else{
+					document.querySelector(".result").innerHTML = currentvalue + newvalue;
+				}
+
+			});
+		}
+
+		document.querySelector(".clearbtn").addEventListener("click",function(){
+			document.querySelector(".result").innerHTML = "";
+			valueholder = 0;
+			document.querySelector(".opPreview").innerHTML = "";
+		});
+
+		document.querySelector(".removebtn").addEventListener("click",function(){
+			document.querySelector(".result").innerHTML = document.querySelector(".result").innerHTML.slice(0,-1);
+		});
+	</script>
+</body>
+</html>
